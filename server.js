@@ -32,7 +32,6 @@ app.use(express.urlencoded({ extended: true })); //forms
 require("dotenv").config() //reads values from .env file 
 
 require('pg'); // explicitly require the "pg" module
-const Sequelize = require('sequelize');
 
 
 // +++ Database connection code
