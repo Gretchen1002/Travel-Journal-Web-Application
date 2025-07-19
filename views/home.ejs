@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+
+<body>
+    <!--hero with overlay-->
+    <div class="hero min-h-screen" style="height: 100vh; background-image: url(/1.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="hero-overlay bg-black bg-opacity-60"></div>
+
+        <div class="hero-content text-center text-neutral-content flex items-center justify-center w-full">
+            <div class="max-w-lg">
+                <h1 class="mb-5 text-5xl font-bold text-white"><strong>EGYPT</strong></h1>
+                <p class="mb-5">
+                    Discover the magic of Egypt, where ancient wonders like the Pyramids of Giza and the Valley of the Kings bring history to life.  
+                </p>
+                <p>Cruise along the timeless Nile River and immerse yourself in vibrant markets, rich culture, and golden desert landscapes.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    
+    <div class="container mx-auto my-10 gap-x-8">
+        <!--link button-->
+        <div class="flex justify-end mb-4">
+            <a href="/memories/add" class="btn btn-neutral">Add More Locations</a>
+        </div>
+
+        <!--table-->
+        <div class="overflow-x-auto">
+        <table class="table table-zebra">
+            <!-- head -->
+            <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Comments</th>
+                <th class="delete button"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <!-- rows -->
+            <% locations.forEach(element =>{ %>
+            <tr>
+                <!--photo-->
+                <td>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar">
+                            <div class="mask mask-squircle h-12 w-12">
+                                <img
+                                src= <%= element.image %>
+                                alt="Avatar Tailwind CSS Component" />
+                            </div>
+                        </div>
+                </td>
+                <!--name & category-->
+                <td>
+                    <span class="font-bold"><%= element.name %></span>
+                    <br>
+                    <span class="badge badge-primary badge-sm badge-outline"><%= element.category %></span>
+                </td>
+                <!--address-->
+                <td><%= element.address %></td>
+                <!--comments-->
+                <td><%= element.comments %></td>
+                <!--delete button-->
+                <th> 
+                    <a href="/memories/delete/<%= element.id %>" class="btn btn-default btn-xs">delete</a>
+                </th>
+            </tr>
+            <% }) %>
+
+            </tbody>
+        </table>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

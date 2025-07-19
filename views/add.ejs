@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+
+<body>
+    <!--hero-->
+    <div class="px-4 md:px-8 lg:px-16 xl:px-32">
+        <div class="hero rounded-lg p-6 bg-neutral-content">
+            <div class="hero-content">
+                <div class="max-w-4xl">
+                    <h1 class="text-5xl font-bold text-center text-secondary">Add a memorable location</h1>
+                    <p class="py-6 text-center text-secondary">
+                         Please fill out the form below to add a location for memorizing your amazing experience!
+                    </p>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <br>
+    
+    <!--form-->
+    <div class="container mx-auto max-w-sm mt-4">
+        <form method="post" action="/memories/add">
+        <div class="form-control mb-4">
+            <input type="text" placeholder="Destination Name" name="name" class="input input-bordered input-secondary w-full max-w-xs" required/>
+        </div>
+        <div class="form-control mb-4">
+            <input type="text" placeholder="Destination Address" name="address" class="input input-bordered input-secondary w-full max-w-xs" required/>
+        </div>
+        <div class="form-control mb-4">        
+            <input type="url" placeholder="URL of your image" name="image" class="input input-bordered input-secondary w-full max-w-xs" required/>
+        </div>
+        <div class="form-control mb-4">
+            <label class="text-secondary">Select a category</label>
+            <select name="category" class="select select-secondary w-full max-w-xs" required>
+                <option value="Food">Food</option>
+                <option value="Outdoors">Outdoors</option>
+                <option value="Events">Events</option>
+            </select>
+        </div>
+        <div class="form-control mb-4">        
+            <label class="text-secondary">Comments</label>
+            <textarea class="textarea textarea-secondary" placeholder="Highlight of this place" name="comments" required></textarea>
+        </div>
+        <div class="form-control mb-4">
+            <button class="btn btn-wide btn-outline btn-secondary">Submit</button>
+        </div>
+        </form>
+    </div>
+    
+
+</body>
+
+</html>
