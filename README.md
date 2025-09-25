@@ -1,5 +1,6 @@
 # Travel Journal Web Application
 A modern web application for documenting and sharing memorable locations from your travels. Built with Express.js, PostgreSQL, and a responsive UI using Tailwind CSS and daisyUI.
+## Deployed on Vercel: Published URL: web322a5-taupe.vercel.app
 
 ## Table of Contents
 
